@@ -1,0 +1,560 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ishibuki w/ Gr2</title>
+  <style>
+    .circle {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #000;
+    }
+    .circle img {
+            width: 100%;
+            height: auto;
+    }
+    .container {
+            display: flex;
+            justify-content: space-between;
+    }
+    table {
+            width: 45%;
+            border-collapse: collapse;
+    }
+    th{
+      margin: 10px;
+      padding: 10px;
+      border-radius: 10px;
+      width: 170px;
+      border: 1px solid black;
+      text-align: center;
+    }
+    table, td {
+            border: 1px solid black;
+    }
+    td {
+            padding: 10px;
+            text-align: left;
+    }
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #F6F7C4;
+      color: #333;
+      text-align: center;
+    }
+    .header {
+            cursor: pointer;
+            padding: 10px;
+            background-color: #f0f0f0;
+            border: 1px solid #ddd;
+            margin-bottom: 5px;
+    }
+    .h1 {
+      font-size: 5em;
+      font-weight: bold;
+      color: #0A97B0;
+      margin-top: 100px;
+      font-family: 'Helvetica', sans-serif;
+    }
+    .intro-container {
+      background-color: rgba(255, 255, 255, 0.8);
+      width: 80%;
+      margin: 50px auto;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: left;
+    }
+    .intro h2 {
+      font-size: 2.5em;
+      color: #0A97B0;
+      margin-bottom: 20px;
+    }
+    .intro p {
+      font-size: 1.2em;
+      line-height: 1.8;
+      color: #000000;
+      margin-bottom: 20px;
+    }
+    .team-title {
+      font-size: 2.5em;
+      font-weight: bold;
+      color: #0A97B0;
+      margin-top: 50px;
+    }
+    .member-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      margin-top: 20px;
+    }
+    .member {
+      margin: 10px;
+      padding: 10px;
+      background-color: #F6D6D6;
+      border: 1px solid black;
+      border-radius: 10px;
+      width: 170px;
+      text-align: center;
+      cursor: pointer;
+    }
+    .member:hover {
+      background-color: #b2ebf2;
+    }
+    .content { display: none; padding: 10px; border: 1px solid #ddd; margin-top: 5px; }
+  </style>
+</head>
+
+<body>
+  <h1>Tổ 2</h1>
+
+  <div class="intro-container">
+    <div class="intro">
+      <h2>Giới thiệu về Tổ 2</h2>
+      <p>Tổ 2 gồm 9 thành viên, mỗi người một cá tính, nhưng khi tụ lại thì tạo nên một tập thể "vui nhộn chính hiệu" không thể lẫn vào đâu được. Dù khác biệt ở tính cách, sở thích, nhưng điểm chung lớn nhất của chúng tôi chính là sự hài hước và năng lượng tích cực. Từ những pha phối hợp "cực kỳ ăn ý" trong học tập cho đến những màn sáng tạo "bá đạo không tưởng" trong các hoạt động tập thể, tổ 2 luôn khiến mọi người chú ý và nhớ đến bằng những dấu ấn riêng.</p>
+      <p>Trong tổ, có người siêu thông minh, chăm chỉ; có người là "cây hài" không ai đọ nổi; cũng có người sáng tạo với những ý tưởng độc đáo bất ngờ. Dù vậy, tất cả đều chung một tinh thần làm việc hết mình, chơi hết sức và không ngại giúp đỡ lẫn nhau. Chúng tôi luôn biết cách biến những bài tập "khó nhằn" thành những thử thách thú vị, và những giờ làm việc nhóm thành những phút giây vừa học vừa cười.</p>
+      <p>Tổ 2 không chỉ là nơi để học hỏi mà còn là nơi tạo ra niềm vui và sự gắn kết. Ở đây, mọi thử thách đều trở nên nhẹ nhàng hơn nhờ sự hợp tác và tinh thần lạc quan của cả nhóm. Với tổ 2, mỗi ngày đi học đều là một ngày đáng nhớ, vì chúng tôi luôn biết cách làm cho mọi khoảnh khắc thêm phần thú vị và tràn ngập tiếng cười! </p>
+    </div>
+  </div>
+  <div class="team-title">Thành viên Tổ 2</div>
+    <div class="member" onclick="toggleContent('content1')">Nguyễn Thị Mỹ Duyên</div>
+    <div id="content1" class="content"><div class="container">
+      <table>
+          <tr>
+              <th colspan="2">Thông Tin Cá Nhân</th>
+          </tr>
+          <tr>
+              <th>Họ Tên:</th>
+              <td>Nguyễn Thị Mỹ Duyên</td>
+          </tr>
+          <tr>
+              <th>Ngày Sinh:</th>
+              <td>12/03/2007</td>
+          </tr>
+          <tr>
+              <th>Số Điện Thoại:</th>
+              <td>0375679253</td>
+          </tr>
+          <tr>
+              <th>Hoạt Động:</th>
+              <td>Thi IOE, Cắm Trại Xuân, Sáng tạo KH - KT</td>
+          </tr>
+          <tr>
+              <th>Sở Thích:</th>
+              <td>Vẽ, nấu ăn, đọc sách điện tử, làm những trò không giống con người lắm (vd: cosplay con thằn lằn)</td>
+            </tr>
+          <tr>
+              <th>Kỹ Năng:</th>
+              <td>Học thêm được nhiều thứ, giao tiếp, thuyết trình, làm việc nhóm...</td>
+          </tr>
+          <tr>
+            <div class="circle"><img src="https://i.ibb.co/BytXJ2J/md.png"></div>
+        </tr>
+      </table>
+
+      <table>
+          <tr>
+              <th colspan="2">Năm Học</th>
+          </tr>
+          <tr>
+              <th>Lớp 10 (2022-2023):</th>
+              <td>.Thi đậu tuyển sinh vào 10, niềm vui to lớn<br>
+                .Được thầy Trần Hà Duy chủ nhiệm, ân cần chu đáo, có cô Thến ngữ văn ấm áp như mẹ hiền.<br>
+                .Tham gia nhảy Chachacha, tham gia Ngày hội kỹ năng, nhiều sự kiện cùng lớp,...<br>
+                .Năm lớp 10 trọn vẹn, đong đầy niềm vui.</td>
+          </tr>
+          <tr>
+              <th>Lớp 11 (2023-2024):</th>
+              <td>.Học rất nhiều, có ít hoạt động cùng nhau hơn.<br>
+                .Tham gia thi KH-KT, Thanh thiếu niên sáng tạo.<br>
+                .Đầu năm suôn sẻ nhưng cuối năm thì không, có rất nhiều việc không như ý muốn và không biết phải làm sao...</td>
+          </tr>
+          <tr>
+              <th>Lớp 12 (2024-2025):</th>
+              <td>.Rất vui, rất đáng nhớ, có lẽ vì cuối cấp nên trở nên trân trọng từng giây phút tuổi học trò<br>.
+                Hiện tại mọi thứ đã ổn thỏa, nhưng chưa có gì nổi bật<br>.
+                Hi vọng sẽ có nhiều kỷ niệm vui vẻ đáng nhớ hơn.</td>
+          </tr>
+      </table>
+  </div>
+</div>
+    <div class="member" onclick="toggleContent('content2')">Trương Vũ Bảo</div>
+    <div id="content2" class="content"><div class="container">
+      <table>
+      <tr>
+          <th colspan="2">Thông Tin Cá Nhân</th>
+      </tr>
+      <tr>
+          <th>Họ Tên:</th>
+          <td>Trương Vũ Bảo</td>
+      </tr>
+      <tr>
+          <th>Ngày Sinh:</th>
+          <td>12/07/2007</td>
+      </tr>
+      <tr>
+          <th>Số Điện Thoại:</th>
+          <td>0392981834</td>
+      </tr>
+      <tr>
+          <th>Sở Thích:</th>
+          <td>Học tiếng Trung, xem phim, nghe nhạc, chơi thể thao</td>
+        </tr>
+      <tr>
+        <div class="circle"><img src="https://i.ibb.co/StqDHsB/vb.png"></div>
+    </tr>
+  </table>
+
+  <table>
+      <tr>
+          <th colspan="2">Năm Học</th>
+      </tr>
+      <tr>
+          <th>Lớp 10 (2022-2023):</th>
+          <td>Đậu tuyển sinh lớp 10, ngày nhận lớp còn bỡ ngỡ, được sắp ngồi kế ngọc chăm bạn đó ân cần với tôi năm lớp 10 hay giúp đỡ mà có khi hỗ báo với tôi và gặp một người bạn vô cùng tuyệt vời nhìn bạn đó đần nhưng lại cực kì tốt bụng luôn ủng hộ tôi mọi việc động viên tôi và không bao giờ chê bai tôi mãi yêu bạn "DHT"'.</td>
+      </tr>
+      <tr>
+          <th>Lớp 11 (2023-2024):</th>
+          <td>Đầu năm được bầu làm tổ trưởng mà làm được một tuần cái chuyển tổ, tham gia nhiều hoạt động của trường nhữ khoa học kĩ thuật, sáng tạo thanh thiếu niên và hội khỏe phù tổng của trường trộm vía mỗi cái được được giải.</td>
+      </tr>
+      <tr>
+          <th>Lớp 12 (2024-2025):</th>
+          <td>Lớp 12 thì được chuyển qua lớp 12A2 học được 3 ngày với đầy những người bạn vô cùng ý nghĩa và đầy niềm vui tuy mới học chung được 3 ngày những lại lưu luyến không dứt được, đầu năm tôi có gặp chút chuyện tôi đã được bạn vô cùng dễ thương an ủi và động viên bạn đó như là vị thần bảo hộ của tôi khi gặp khó khăn bạn đó luôn xuất hiện, tuy có một khoảng thời gian không nói chuyện với nhau nhưng bạn đó luôn quan tâm đến tôi, giờ tôi chỉ muốn nói cảm ơn bạn rất nhiều nhe "DHT", và tôi crush một người cũng đã 5 năm rồi không dám tỏ tình, ý là cũng tỏ tình rồi mà bạn đó không rep nên thấy quê quá nên thu hồi tôi luôn lấy hình tượng của cậu ấy để theo đuổi.</td>
+      </tr>
+  </table></div></div>
+
+    <div class="member" onclick="toggleContent('content3')">Mai Bích Trân</div>
+    <div id="content3" class="content"><div class="container">
+      <table>
+      <tr>
+          <th colspan="2">Thông Tin Cá Nhân</th>
+      </tr>
+      <tr>
+          <th>Họ Tên:</th>
+          <td>Mai Bích Trân</td>
+      </tr>
+      <tr>
+          <th>Ngày Sinh:</th>
+          <td>14/05/2007</td>
+      </tr>
+      <tr>
+          <th>Số Điện Thoại:</th>
+          <td>0916856234</td>
+      </tr>
+      <tr>
+        <th>Cân nặng:</th>
+        <td>455kg</td>
+    </tr>
+    <tr>
+      <th>Chiều cao:</th>
+      <td>1m65</td>
+  </tr>
+        <div class="circle"><img src="https://i.ibb.co/dk9Mvgw/bt.png"></div>
+    </tr>
+  </table>
+
+  <table>
+      <tr>
+          <th colspan="2">Năm Học</th>
+      </tr>
+      <tr>
+          <th>Lớp 10 (2022-2023):</th>
+          <td>Giải khuyến kích toàn đoàn QP-AN - học Lý dốt thì thôi luôn (ngo như bù)</td>
+      </tr>
+      <tr>
+          <th>Lớp 11 (2023-2024):</th>
+          <td>Giải khuyến khích KH-KT, Lý ổn hơn rồi, đổi thành dốt Hóa ( Gv không dám nhìn mặt )</td>
+      </tr>
+      <tr>
+          <th>Lớp 12 (2024-2025):</th>
+          <td>Không có thành tích nổi bật, học hoá vẫn ngoo</td>
+      </tr>
+  </table></div></div>
+
+    <div class="member" onclick="toggleContent('content4')">Lê Lợi Tính</div>
+    <div id="content4" class="content"><div class="container">
+      <table>
+      <tr>
+          <th colspan="2">Thông Tin Cá Nhân</th>
+      </tr>
+      <tr>
+          <th>Họ Tên:</th>
+          <td>Lê Lợi Tính</td>
+      </tr>
+      <tr>
+          <th>Ngày Sinh:</th>
+          <td>28/12/2007</td>
+      </tr>
+      <tr>
+          <th>Số Điện Thoại:</th>
+          <td>0399767050</td>
+      </tr>
+      <tr>
+        <th>Cân nặng:</th>
+        <td>43kg</td>
+    </tr>
+    <tr>
+      <th>Chiều cao:</th>
+      <td>1m60</td>
+        <div class="circle"><img src="https://i.ibb.co/XzYvQz1/lt.png"></div>
+    </tr>
+  </table>
+
+  <table>
+      <tr>
+          <th colspan="2">Năm Học</th>
+      </tr>
+      <tr>
+          <th>Lớp 10 (2022-2023):</th>
+          <td>Rớt HSG toán, gia nhập LMPX (aka Group 2 ), giữ chức vụ thành viên có cố gắng</td>
+      </tr>
+      <tr>
+          <th>Lớp 11 (2023-2024):</th>
+          <td>Giải nhì tỉnh HSG KT-PL, thăng chức thành thành viên kì cựu ( đuợc tí quyền hạn ), +1 tuổi</td>
+      </tr>
+      <tr>
+          <th>Lớp 12 (2024-2025):</th>
+          <td>thăng chức thành nhà cầm quyền LMPX và đổi tên thành PX LIEMS</td>
+      </tr>
+  </table></div></div>
+    <div class="member" onclick="toggleContent('content5')">Trần Hoàng Triệu Phú</div>
+    <div id="content5" class="content"><div class="container">
+      <table>
+      <tr>
+          <th colspan="2">Thông Tin Cá Nhân</th>
+      </tr>
+      <tr>
+          <th>Họ Tên:</th>
+          <td>Trần Hoàng Triệu Phú</td>
+      </tr>
+      <tr>
+          <th>Ngày Sinh:</th>
+          <td>17/05/2007</td>
+      </tr>
+      <tr>
+          <th>Số Điện Thoại:</th>
+          <td>097739210</td>
+      </tr>
+      <tr>
+        <div class="circle"><img src="https://i.ibb.co/J76N2YZ/tp.png"></div>
+    </tr>
+  </table>
+
+  <table>
+      <tr>
+          <th colspan="2">Năm Học</th>
+      </tr>
+      <tr>
+          <th>Lớp 10 (2022-2023):</th>
+          <td>Gặp gỡ những người bạn tổ 2, hoàn thành bằng tốt nghiệp lớp 9</td>
+      </tr>
+      <tr>
+          <th>Lớp 11 (2023-2024):</th>
+          <td>Tham gia kì thi tham quan HSG cấp tỉnh môn tiếng anh, hoàn thành cú plank 3 phút</td>
+      </tr>
+      <tr>
+          <th>Lớp 12 (2024-2025):</th>
+          <td>Siêu hậu vệ Trại Gà FC, tham gia các hoạt động trao đổi kĩ năng đá bóng</td>
+      </tr>
+  </table></div></div>
+
+    <div class="member" onclick="toggleContent('content6')">Trần Vũ Hoà Phát</div>
+    <div id="content6" class="content"><div class="container">
+      <table>
+      <tr>
+          <th colspan="2">Thông Tin Cá Nhân</th>
+      </tr>
+      <tr>
+          <th>Họ Tên:</th>
+          <td>Trần Vũ Hoà Phát</td>
+      </tr>
+      <tr>
+          <th>Ngày Sinh:</th>
+          <td>27/09/2007</td>
+      </tr>
+      <tr>
+          <th>Số Điện Thoại:</th>
+          <td>0915002267</td>
+      </tr>
+      <tr>
+        <div class="circle"><img src="https://i.ibb.co/PjW77Nj/hp.jpg"></div>
+    </tr>
+  </table>
+
+  <table>
+      <tr>
+          <th colspan="2">Năm Học</th>
+      </tr>
+      <tr>
+          <th>Lớp 10 (2022-2023):</th>
+          <td>Về quê nên không cắm trại lần 1 - Trải nghiệm thi HSG (0đ vl)</td>
+      </tr>
+      <tr>
+          <th>Lớp 11 (2023-2024):</th>
+          <td>Về quê nên không cắm trại lần 2 - Chính thức xác lập kỷ lục vô tiền khoáng hậu: Thi HSG 0 điểm hai năm liên tục</td>
+      </tr>
+      <tr>
+          <th>Lớp 12 (2024-2025):</th>
+          <td>Được cắm trại nhưng nhà trường không tổ chức (cay) - Hứa hẹn có một chuyến đi Đà Lạt tuyệt vời</td>
+      </tr>
+  </table></div></div>
+
+
+    <div class="member" onclick="toggleContent('content7')">Đỗ Đăng Thịnh</div>
+    <div id="content7" class="content"><div class="container">
+      <table>
+      <tr>
+          <th colspan="2">Thông Tin Cá Nhân</th>
+      </tr>
+      <tr>
+          <th>Họ Tên:</th>
+          <td>Đỗ Đăng Thịnh</td>
+      </tr>
+      <tr>
+          <th>Ngày Sinh:</th>
+          <td>05/08/2007</td>
+      </tr>
+      <tr>
+          <th>Số Điện Thoại:</th>
+          <td>0973637090</td>
+      </tr>
+      <tr>
+        <div class="circle"><img src="https://i.ibb.co/GdYCY7Q/dt.png"></div>
+    </tr>
+  </table>
+
+  <table>
+      <tr>
+          <th colspan="2">Năm Học</th>
+      </tr>
+      <tr>
+          <th>Lớp 10 (2022-2023):</th>
+          <td>Được bầu làm phó chủ tịch Group 2, hoàn thành ký sự Bạc Liêu lần 1</td>
+      </tr>
+      <tr>
+          <th>Lớp 11 (2023-2024):</th>
+          <td>Tham gia Trại Gà FC với tư cách thành viên chính thức, hoàn thành ký sự Bạc Liêu lần 2</td>
+      </tr>
+      <tr>
+          <th>Lớp 12 (2024-2025):</th>
+          <td>Thành viên của LMHT, gặp gỡ và giao lưu với top 50 Ambessa Việt Nam</td>
+      </tr>
+  </table></div></div>
+
+    <div class="member" onclick="toggleContent('content8')">Nguyễn Thanh Phương</div>
+    <div id="content8" class="content"><div class="container">
+      <table>
+      <tr>
+          <th colspan="2">Thông Tin Cá Nhân</th>
+      </tr>
+      <tr>
+          <th>Họ Tên:</th>
+          <td>Nguyễn Thanh Phương</td>
+      </tr>
+      <tr>
+        <th>Bí danh:</th>
+        <td>Hồ Duy Phương</td>
+    </tr>
+      <tr>
+          <th>Ngày Sinh:</th>
+          <td>09/05/2007</td>
+      </tr>
+      <tr>
+          <th>Số Điện Thoại:</th>
+          <td>0868904824</td>
+      </tr>
+      <tr>
+        <div class="circle"><img src="https://i.ibb.co/Ny7J6Bv/tphuong.png"></div>
+    </tr>
+  </table>
+
+  <table>
+      <tr>
+          <th colspan="2">Năm Học</th>
+      </tr>
+      <tr>
+          <th>Lớp 10 (2022-2023):</th>
+          <td>Được làm quen với các bạn mới, tham gia cắm trại xuân</td>
+      </tr>
+      <tr>
+          <th>Lớp 11 (2023-2024):</th>
+          <td>Trở thành một thủ môn của Trại gà FC, hoàn thành ký sự Bạc Liêu lần 2</td>
+      </tr>
+      <tr>
+          <th>Lớp 12 (2024-2025):</th>
+          <td>Trở thành man character số 1 Thế giới, Lần đầu trải nghiệm LMHT cùng các homie</td>
+      </tr>
+  </table></div></div>
+
+    <div class="member" onclick="toggleContent('content9')">Phan Minh Trí</div>
+    <div id="content9" class="content"><div class="container">
+      <table>
+      <tr>
+          <th colspan="2">Thông Tin Cá Nhân</th>
+      </tr>
+      <tr>
+          <th>Họ Tên:</th>
+          <td>Phan Minh Trí</td>
+      </tr>
+      <tr>
+          <th>Ngày Sinh:</th>
+          <td>02/01/2007</td>
+      </tr>
+      <tr>
+          <th>Số Điện Thoại:</th>
+          <td>0866590644</td>
+      </tr>
+      <tr>
+        <div class="circle"><img src="https://i.ibb.co/NWGQsFM/mt.png"></div>
+    </tr>
+  </table>
+
+  <table>
+      <tr>
+          <th colspan="2">Năm Học</th>
+      </tr>
+      <tr>
+          <th>Lớp 10 (2022-2023):</th>
+          <td>Về Trường THCS Phường 1 rút bằng tốt nghiệp THCS<br>.
+            Vào nhận lớp làm quen giáo  viên chủ nhiệm và các bạn trong lớp<br>.
+            Cùng lớp trải nghiệm ngày hội kĩ năng<br>.
+            Tham gia cuộc thi nhảy chachacha và đạt giải nhất khối 10<br>.
+            Tham gia hội thao điền kinh nội dung chạy 1500m<br>.
+            Cắm trại xuân 2023 cùng thầy Trần Hà Duy và lớp 10a1</td>
+      </tr>
+      <tr>
+          <th>Lớp 11 (2023-2024):</th>
+          <td>Gặp gỡ giáo viên chủ nhiệm mới thầy Nguyễn Hải Âu<br>.
+            Tham gia hội khỏe phù đổng cấp trường môn cầu lông<br>.
+            Tham gia làm cổng trại cùng nhau chia sẻ lớp<br>.
+            Cùng lớp và thầy cắm trại xuân 2024</td>
+      </tr>
+      <tr>
+          <th>Lớp 12 (2024-2025):</th>
+          <td>Lại có duyên đồng hành cùng thầy Nguyễn Hải Âu<br>.
+            Tổ chức 20/11 cho thầy chủ nhiệm<br>.
+            Đạt giải khuyến khích cuộc thi "thiết kế và trang trí thiệp"</td>
+      </tr>
+  </table></div></div>
+    <script>
+        function toggleContent(id) {
+            var content = document.getElementById(id);
+            if (content.style.display === "block") {
+                content.style.display = "none";
+            } else {
+                content.style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>
